@@ -35,7 +35,7 @@
 
 
 ```plaintext
-laqcce/
+RSL-SQL/
 ├── README.md
 ├── requirements.txt
 │
