@@ -1,7 +1,17 @@
-<<<<<<< HEAD
-# RSL-SQL
-=======
-# RSL-SQL: Robust Schema Linking in Text-to-SQL Generation
+<div align="center">
+  <h1><a href="https://arxiv.org/abs/2411.00073">RSL-SQL: Robust Schema Linking in Text-to-SQL Generation</a></h1>
+</div>
+
+
+<h5 align="center"> Please give us a star ⭐ for the latest update.  </h5>
+
+<h5 align="center">
+
+ 
+[![arXiv](https://img.shields.io/badge/Arxiv-2411.00073-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2411.00073) 
+  <br>
+</h5>
+
 ## Overview
 
 ![](figs/framework.png)
@@ -52,7 +62,7 @@ laqcce/
 
 
 ```bash
-conda create -n rsl_sql python=3.8
+conda create -n rsl_sql python=3.10
 conda activate rsl_sql
 pip install -r requirements.txt
 ```
@@ -130,4 +140,12 @@ python src/step_3_binary_selection.py --ppl_file src/information/ppl_dev.json --
 # There is one output files in this step, one is `src/sql_log/final_sql.txt`.
 python src/step_4_self_correction.py --ppl_file src/information/ppl_dev.json --sql_4_output src/sql_log/final_sql.txt --sql_refinement src/sql_log/step_3_binary.txt --start_index 0
 ```
->>>>>>> 0312a40 (first commit)
+# Citation
+```citation
+@article{cao2024rsl,
+  title={RSL-SQL: Robust Schema Linking in Text-to-SQL Generation},
+  author={Cao, Zhenbiao and Zheng, Yuanlei and Fan, Zhihao and Zhang, Xiaojin and Chen, Wei},
+  journal={arXiv preprint arXiv:2411.00073},
+  year={2024}
+}
+```
