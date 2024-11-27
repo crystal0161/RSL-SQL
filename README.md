@@ -14,7 +14,9 @@
 
 ## Overview
 
-![](figs/framework.png)
+![](figs/framework.jpg)
+
+
 
 
 ## Project directory structure

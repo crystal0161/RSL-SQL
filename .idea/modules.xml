@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/laqcce.iml" filepath="$PROJECT_DIR$/.idea/laqcce.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/RSL-SQL.iml" filepath="$PROJECT_DIR$/.idea/RSL-SQL.iml" />
     </modules>
   </component>
 </project>
