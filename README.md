@@ -16,6 +16,14 @@
 
 ![](figs/framework.jpg)
 
+## Main Results
+
+### Execution Accuracy on BIRD Dev Set
+![](figs/main_bird.png)
+
+## Ablaition Study
+
+![](figs/ablation.png)
 
 
 
