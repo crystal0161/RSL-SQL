@@ -18,30 +18,13 @@ def read_parquet(file_path):
     return answers
 
 
-def main(cu):
+def main():
     answers = read_parquet(file_path)
-    if cu == 1:
-        with open('few_shot/dev.json', 'r') as f:
-            exa = json.load(f)
-        for temp in exa:
-            answer = {}
-            answer['question'] = temp['question']
-            answer['sql'] = temp['SQL']
-            answers.append(answer)
 
     with open('few_shot/QA.json', 'w') as f:
         json.dump(answers, f, indent=4, ensure_ascii=False)
 
 
 if __name__ == '__main__':
-    # 创建 ArgumentParser 对象
-    parser = argparse.ArgumentParser()
 
-    # 添加命令行选项
-
-    ## 这里的dataset是ppl_dev.json
-    parser.add_argument("--cu", type=int, default=1)
-    # 解析命令行参数
-    args = parser.parse_args()
-
-    main(args.cu)
+    main()

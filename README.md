@@ -33,13 +33,12 @@
 
 - Download the `column_meaning.json` file and place it in the `data/` folder. Download address: https://github.com/quge2023/TA-SQL/blob/master/outputs/column_meaning.json
 
-- Download the `test.json` file of the development set in the `data/` folder
+- Download the `dev.json` file of the development set in the `data/` folder
 
-- Download the `test_tables.json` file and place it in the `data/` folde
+- Download the `dev_tables.json` file and place it in the `data/` folde
 
 - Download the `train-00000-of-00001-fe8894d41b7815be.parquet` file and place it in the `few_shot/` folder. Download address: https://huggingface.co/datasets/xu3kev/BIRD-SQL-data-train/tree/main/data
 
-- Download the `dev.json` file of the development set in the `few_shot/` folder
 
 
 
@@ -51,15 +50,14 @@ RSL-SQL/
 │
 ├── data/
 │   ├── column_meaning.json
-│   ├── test.json
-│   └── test_tables.json
+│   ├── dev.json
+│   └── dev_tables.json
 │
 ├── database/
-│   └── test_databases/
+│   └── dev_databases/
 │
 ├── few_shot/
 │   ├── sentence_transformers/
-│   ├── dev.json
 │   └── train-00000-of-00001-fe8894d41b7815be.parquet
 │
 └── src/
@@ -79,7 +77,7 @@ pip install -r requirements.txt
 Modify parameter configuration in `src/configs/config.py`
 
 ```python
-dev_databases_path = 'database/test_databases'
+dev_databases_path = 'database/dev_databases'
 dev_json_path = 'data/dev.json'
 api = '..'
 base_url = 'http://'
@@ -98,8 +96,8 @@ base_url = 'http://'
 # Construct `ppl_dev.json`. 
 python src/data_construct.py 
 
-#Construct few-shot examples pairs,If the examples in the development set can be used as context, then cu is set to 1, otherwise it is 0
-python few_shot/construct_QA.py --cu 0/1
+#Construct few-shot examples pairs
+python few_shot/construct_QA.py 
 
 # Generate few-shot examples
 python few_shot/slg_main.py --dataset src/information/ppl_dev.json --out_file src/information/example.json --kshot 3
