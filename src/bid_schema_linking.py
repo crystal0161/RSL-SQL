@@ -168,13 +168,14 @@ def filter(dev_file, schema_file, output_file):
 
         db_schema = db_schema_copy[db]
 
-        db_schema = [obj.replace('`', '').lower() for obj in db_schema]
+        db_schema = [obj.replace('`', '') for obj in db_schema]
 
         columns = information['columns']
         columns = [obj.replace('`', '').lower() for obj in columns]
-        for column in columns:
-            if column in db_schema and column not in pred:
-                pred.append(column)
+
+        for obj in db_schema:
+            if obj.lower() in columns and obj.lower() not in pred:
+                pred.append(obj)
 
         preds.append(pred)
 

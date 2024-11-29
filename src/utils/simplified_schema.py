@@ -7,8 +7,6 @@ def simplified(ppl):
     tables = ppl['tables']
     columns = ppl['columns']
 
-    columns = [obj.replace('`', '').lower() for obj in columns]
-    columns = [obj.replace('.', '.`') + '`' for obj in columns]
 
     # 简化ddl
     table_list = {}
