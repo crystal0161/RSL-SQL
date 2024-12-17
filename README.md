@@ -33,9 +33,7 @@
 
 - Download the `column_meaning.json` file and place it in the `data/` folder. Download address: https://github.com/quge2023/TA-SQL/blob/master/outputs/column_meaning.json
 
-- Download the `dev.json` file of the development set in the `data/` folder
-
-- Download the `dev_tables.json` file and place it in the `data/` folde
+- Download the `dev.json` file and `dev_tables.json` file of the development set in the `data/` folder. Download address: https://bird-bench.github.io/
 
 - Download the `train-00000-of-00001-fe8894d41b7815be.parquet` file and place it in the `few_shot/` folder. Download address: https://huggingface.co/datasets/xu3kev/BIRD-SQL-data-train/tree/main/data
 
