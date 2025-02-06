@@ -1,0 +1,4 @@
+data/column_meaning.json
+data/dev.json
+data/dev_tables.json
+few_shot/sentence_transformers/pytorch_model.bin

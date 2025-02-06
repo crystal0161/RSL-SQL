@@ -16,7 +16,7 @@ def table_info_construct(ppl):
                   '\n### Foreign key information of Sqlite SQL tables, used for table joins:\n' + foreign_key)
     return table_info
 
-
+# 对应前向链接
 def table_column_selection(table_info, ppl):
     gpt = model()
     evidence = ppl['evidence'].strip()
@@ -26,7 +26,7 @@ def table_column_selection(table_info, ppl):
     table_column = json.loads(table_column)
     return table_column
 
-
+#对应初始SQL生成，输出SQL1
 def preliminary_sql(table_info, table_column, ppl):
     gpt = model()
     example = ppl['example']

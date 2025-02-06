@@ -16,7 +16,7 @@ def table_info_construct(simple_ddl, ddl_data, foreign_key, explanation):
 
     return table_info
 
-
+# 对应要素提取中的 元素（表和列）
 def table_augmentation(table_info, ppl):
     question = ppl['question'].strip()
     evidence = ppl['evidence'].strip()
@@ -27,7 +27,7 @@ def table_augmentation(table_info, ppl):
     table_gpt_res = json.loads(table_gpt_res)
     return table_gpt_res
 
-
+# 对应要素提取中的 关键词
 def key_word_augmentation(table_info, ppl):
     gpt = model()
 
@@ -39,7 +39,7 @@ def key_word_augmentation(table_info, ppl):
     word_gpt_res = json.loads(word_gpt_res)
     return word_gpt_res
 
-
+# 对应要素提取中的 条件
 def condition_augmentation(ppl):
     gpt = model()
 
@@ -48,7 +48,7 @@ def condition_augmentation(ppl):
     relation_gpt_res = json.loads(relation_gpt_res)
     return relation_gpt_res
 
-
+#生成SQL2
 def sql_generation(ppl, table_aug, word_aug, cond_aug, table_info):
     gpt = model()
 

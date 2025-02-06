@@ -5,7 +5,7 @@ from utils.util import execute_sql
 from utils.simplified_schema import simplified, explanation_collection
 import argparse
 
-
+# 用SQL1 和 SQL2 生成 SQL3 
 def prompt_construct(simple_ddl, ddl_data, foreign_key, explanation, ppl, sql1, sql2):
     db = ppl['db']
     question = ppl['question'].strip()
